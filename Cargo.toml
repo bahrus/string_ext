@@ -2,6 +2,7 @@
 name = "string_ext"
 version = "0.0.1"
 keywords = ["string", "extension", "before", "after"]
+description = "Utility functions for strings."
 edition = "2021"
 author = "Bruce Anderson <anderson.bruce.b@gmail.com>"
 license = "MIT"
