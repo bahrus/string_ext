@@ -1,9 +1,11 @@
 [package]
 name = "string_ext"
 version = "0.0.1"
+keywords = ["string", "extension", "before", "after"]
 edition = "2021"
 author = "Bruce Anderson <anderson.bruce.b@gmail.com>"
 license = "MIT"
+readme="README.MD"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
