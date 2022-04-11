@@ -1,0 +1,10 @@
+[package]
+name = "string_ext"
+version = "0.0.1"
+edition = "2021"
+author = "Bruce Anderson <anderson.bruce.b@gmail.com>"
+license = "MIT"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
