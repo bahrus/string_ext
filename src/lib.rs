@@ -33,4 +33,11 @@ mod tests {
         let result = original.substring_before("test");
         assert_eq!(result, "This is a ");
     }
+
+    #[test]
+    fn test_substring_after() {
+        let original = String::from("This is a test of the emergency broadcast system");
+        let result = original.substring_after("test");
+        assert_eq!(result, " of the emergency broadcast system");
+    }
 }
