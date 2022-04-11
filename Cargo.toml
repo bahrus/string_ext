@@ -1,6 +1,6 @@
 [package]
 name = "string_ext"
-version = "0.0.1"
+version = "0.0.2"
 keywords = ["string", "extension", "before", "after"]
 description = "Utility functions for strings."
 edition = "2021"
