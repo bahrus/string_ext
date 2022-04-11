@@ -1,5 +1,7 @@
 pub trait StringExt {
+    /// Returns the string before the search string.
     fn substring_before(&self, search: &str) -> String;
+    /// Returns the string after the search string.
     fn substring_after(&self, search: &str) -> String;
 }
 
