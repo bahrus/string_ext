@@ -4,6 +4,9 @@ pub trait StringExt {
     /// Returns the string after the search string.
     fn substring_after(&self, search: &str) -> String;
 
+    /// Returns the string before the last match of the search string.
+    fn substring_before_last(&self, search: &str) -> String;
+
     /// Returns the string between the start and end bookend strings.
     fn substring_between(&self, start: &str, end: &str) -> String;
 }
@@ -11,6 +14,15 @@ pub trait StringExt {
 impl StringExt for String {
     fn substring_before(&self , search: &str) -> String{
         let i_pos = self.find(search);
+        let answer = match i_pos {
+            None => String::from(self),
+            Some(val) => self[..val].to_string()
+        };
+        answer
+    }
+
+    fn substring_before_last(&self, search: &str) -> String {
+        let i_pos = self.rfind(search);
         let answer = match i_pos {
             None => String::from(self),
             Some(val) => self[..val].to_string()
@@ -52,6 +64,12 @@ mod tests {
         let original = String::from("This is a test of the emergency broadcast system");
         let result = original.substring_before("test");
         assert_eq!(result, "This is a ");
+    }
+
+    fn test_substring_before_last(){
+        let original = String::from("This is a test of the emergency broadcast test system");
+        let result = original.substring_before_last("test");
+        assert_eq!(result, "This is a test of the emergency broadcast ");
     }
 
     #[test]
