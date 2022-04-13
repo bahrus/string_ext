@@ -66,6 +66,7 @@ mod tests {
         assert_eq!(result, "This is a ");
     }
 
+    #[test]
     fn test_substring_before_last(){
         let original = String::from("This is a test of the emergency broadcast test system");
         let result = original.substring_before_last("test");
