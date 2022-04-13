@@ -56,10 +56,11 @@ impl StringExt for String {
         let answer = match i_start_pos {
             None => String::new(),
             Some(val) => {
-                let i_end_pos = self.find(end);
+                let rest = self[(val + start.len())..].to_string();
+                let i_end_pos = rest.find(end, );
                 match i_end_pos {
                     None => String::new(),
-                    Some(val2) => self[(val + start.len())..val2].to_string()
+                    Some(val2) => rest[0..val2].to_string()
                 }
             }
         };
